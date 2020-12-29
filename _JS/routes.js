@@ -1,4 +1,3 @@
-
 const restBaseURL = "//127.0.0.1:8181/Exercise_73/rest/";
 export const RestRoutes = {
 	user: {
@@ -7,6 +6,7 @@ export const RestRoutes = {
 		logout: restBaseURL + "user/logout",
 		register: restBaseURL + "user/register",
 		delete: restBaseURL + "user/delete/{username}",
+		update: restBaseURL + "user/update",
 		find: restBaseURL + "user/{username}",
 	},
 	item: {

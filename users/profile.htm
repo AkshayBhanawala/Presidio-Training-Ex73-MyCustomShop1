@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="/Exercise_73/_CSS/libraries/bootstrap.css">
+		<link rel="stylesheet" href="/Exercise_73/_CSS/myStyle.css">
+		<link id="css_themeLight" rel="stylesheet" href="/Exercise_73/_CSS/themeLight.css">
+		<link id="css_themeDark" rel="stylesheet" href="/Exercise_73/_CSS/themeDark.css">
+
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/jquery-3.5.1.min.js"></script>
+		<script type="module" src="/Exercise_73/_JS/general.js"></script>
+		<script type="module" src="/Exercise_73/_JS/profile.js"></script>
+
+		<title>MCS - Profile</title>
+	</head>
+
+	<body class="hide">
+
+		<header>
+			<h1><a id="linkHome" href="/Exercise_73/">My Custom Shop</a></h1>
+		</header>
+		<section class="user">
+			<div><a href="/Exercise_73/users/profile.htm"><label id="lbl_username">Loading...</label></a></div>
+			<div><button class="btn btn-danger" id="btn_logout">Logout</button></div>
+		</section>
+		<section id="menuMANAGER" class="menu hide">
+			<a href="/Exercise_73/users/manager">Home</a>
+			<a href="/Exercise_73/users/manager/reports.htm">Reports</a>
+		</section>
+
+		<section id="menuCLERK" class="menu hide">
+			<a href="/Exercise_73/users/clerk">Home</a>
+			<a href="/Exercise_73/users/clerk/additem.htm">Add Item</a>
+		</section>
+
+		<section id="menuCUSTOMER" class="menu hide">
+			<a href="/Exercise_73/users/customer">Home</a>
+			<a href="/Exercise_73/users/customer/orders.htm">Orders</a>
+		</section>
+
+		<section id="section_ProfileForm" class="contentWrapper container hide">
+			<div class="div_profile row">
+				<div id="div_profileAvatar_wrapper" class="profileAvatar_wrapper" CUSTOMER="">
+					<div class="profileAvatar" >
+						<span id="span_avatarText" class="avatarText">UN</span>
+					</div>
+					<div class="profileRole">
+						<span id="span_avatarRole">UserRole</span>
+					</div>
+					<div class="profileName">
+						<span id="span_avatarName" class="avatarName">UserName</span>
+					</div>
+				</div>
+				<hr/>
+				<form id="ProfileForm" novalidate class="needs-validation" method="post">
+					<div class="formTitle">
+						<h4>Update Password</h4>
+					</div>
+					<div class="form-group mb-4">
+						<!-- <label for="tb_password">Current Password</label> -->
+						<input type="password" id="tb_password" class="form-control form-control-lg" placeholder="Current Password" required>
+						<div id="tb_password_error" class="invalid-feedback">Yo!</div>
+					</div>
+					<div class="form-group mb-4">
+						<!-- <label for="tb_new_password">New Password</label> -->
+						<input type="password" id="tb_new_password" class="form-control form-control-lg" placeholder="New Password" required>
+						<div id="tb_new_password_error" class="invalid-feedback">Yo!</div>
+					</div>
+					<div class="form-group mb-4">
+						<!-- <label for="tb_confirm_new_password">Confirm New Password</label> -->
+						<input type="password" id="tb_confirm_new_password" class="form-control form-control-lg" placeholder="Confirm New Password" required>
+						<div id="tb_confirm_new_password_error" class="invalid-feedback">Yo!</div>
+					</div>
+					<div class="form-group mb-4 text-center">
+						<input type="submit" class="btn" value="Update" id="btn_submit" />
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section id="noUser" class="contentWrapper container">
+			<h3>No user is logged in</h3>
+		</section>
+
+		<footer>
+		</footer>
+
+	</body>
+
+</html>

@@ -77,12 +77,17 @@
 	}
 }
 
+.hide {
+	visibility: collapse;
+	opacity: 0;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	width: 100%;
-	min-width: 370px;
+	min-width: 320px;
 	background-color: rgba(var(--bg-color), 1);
 	color: rgba(var(--color), 1);
 }
@@ -115,6 +120,22 @@ header {
 	padding: 10px;
 	height: var(--header-height);
 	background-color: rgba(var(--bg-color-inverse), 1);
+	padding-left: 80px;
+}
+@media only screen and (min-width: 600px) {
+	header {
+		padding-left: unset;
+	}
+}
+
+header h1 {
+	text-align: center;
+		transition: 0.1s;
+}
+@media only screen and (max-width: 400px) {
+	header h1 {
+		font-size: 28px;
+	}
 }
 
 header a {
@@ -139,11 +160,20 @@ header a {
 	margin: 10px;
 	max-width: 50%;
 }
+.user a {
+	text-decoration: none;
+}
 .user #lbl_username {
 	display: flex;
 	align-items: center;
 	font-size: large;
 	font-weight: 600;
+	cursor: pointer;
+	padding: 5px 10px;
+	margin: 0;
+	border: 1px solid rgba(var(--bg-color));
+	border-radius: 3px;
+	text-align: center;
 }
 
 .menu,
@@ -393,4 +423,91 @@ header a {
 
 .reportItem .inputs .text-muted {
 	font-size: 16px;
+}
+
+form .formTitle {
+	text-align: center;
+	margin-bottom: 20px;
+	opacity: 0.7;
+}
+
+.div_profile {
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.div_profile hr {
+	display: block;
+}
+
+.div_profile .profileAvatar_wrapper .profileName,
+.div_profile .profileAvatar_wrapper .profileRole {
+	text-align: center;
+}
+
+.div_profile .profileAvatar_wrapper .profileRole {
+	opacity: 0.5;
+}
+.div_profile .profileAvatar_wrapper[ADMIN] .profileRole {
+	color: rgba(var(--bs-red), 1);
+}
+.div_profile .profileAvatar_wrapper[MANAGER] .profileRole{
+	color: rgba(var(--bs-pink), 1);
+}
+.div_profile .profileAvatar_wrapper[CLERK] .profileRole {
+	color: rgba(var(--bs-purple), 1);
+}
+.div_profile .profileAvatar_wrapper[CUSTOMER] .profileRole {
+	color: rgba(var(--bs-cyan), 1);
+}
+
+.div_profile .profileAvatar_wrapper,
+.div_profile #ProfileForm {
+	margin: auto;
+}
+
+.div_profile .profileAvatar_wrapper .profileAvatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 150px;
+	border: 2px solid rgba(var(--bg-color-inverse), 0.3);
+	border-radius: 50%;
+	margin: auto;
+	font-size: 50px;
+	background-color: rgba(var(--bg-color-inverse), 0.05);
+	color: rgba(var(--bg-color-inverse), 0.1);
+	cursor: default;
+}
+.div_profile .profileAvatar_wrapper[ADMIN] .profileAvatar {
+	border-color: rgba(var(--bs-red), 0.8);
+	color: rgba(var(--bs-red), 0.3);
+}
+.div_profile .profileAvatar_wrapper[MANAGER] .profileAvatar {
+	border-color: rgba(var(--bs-pink), 0.8);
+	color: rgba(var(--bs-pink), 0.3);
+}
+.div_profile .profileAvatar_wrapper[CLERK] .profileAvatar {
+	border-color: rgba(var(--bs-purple), 0.8);
+	color: rgba(var(--bs-purple), 0.3);
+}
+.div_profile .profileAvatar_wrapper[CUSTOMER] .profileAvatar {
+	border-color: rgba(var(--bs-cyan), 0.8);
+	color: rgba(var(--bs-cyan), 0.3);
+}
+
+@media only screen and (min-width: 768px) {
+	.div_profile hr {
+		border: none;
+		height: unset;
+		width: 1px;
+		border-left: 1px solid rgba(var(--color), 0.3);
+		margin: 10px;
+	}
+
+	.div_profile .profileAvatar_wrapper,
+	.div_profile #ProfileForm {
+		margin: unset;
+	}
 }
