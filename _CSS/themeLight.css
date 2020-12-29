@@ -1,0 +1,10 @@
+:root {
+	--bg-color: var(--bs-light);
+	--bg-color2: var(--bs-gray);
+	--bg-color-inverse: var(--bs-dark);
+
+	--color: var(--bs-dark);
+	--color-inverse: var(--bs-light);
+
+	--form-box-shadow: 0px 10px 30px -15px rgba(0, 0, 0, 0.5);
+}

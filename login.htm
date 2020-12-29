@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="/Exercise_73/_CSS/libraries/bootstrap.css">
+		<link rel="stylesheet" href="/Exercise_73/_CSS/myStyle.css">
+		<link id="css_themeLight" rel="stylesheet" href="/Exercise_73/_CSS/themeLight.css">
+		<link id="css_themeDark" rel="stylesheet" href="/Exercise_73/_CSS/themeDark.css">
+
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/jquery-3.5.1.min.js"></script>
+		<script type="module" src="/Exercise_73/_JS/general.js"></script>
+		<script type="module" src="/Exercise_73/_JS/login.js"></script>
+
+		<title>MCS - Login</title>
+	</head>
+
+	<body class="hide">
+
+		<header>
+			<h1><a href="/Exercise_73/">My Custom Shop</a></h1>
+		</header>
+
+		<section class="menu">
+			<a href="/Exercise_73/login.htm">Login</a>
+			<a href="/Exercise_73/register.htm">Register</a>
+		</section>
+
+		<section class="contentWrapper container">
+			<div class="card inputform">
+				<h3>LOGIN</h3>
+				<hr />
+				<form id="LoginForm" novalidate class="needs-validation" method="post">
+					<div class="form-group mb-4">
+						<label for="tb_username">Username</label>
+						<input type="text" id="tb_username" class="form-control form-control-lg" placeholder="Username" required>
+						<div id="tb_username_error" class="invalid-feedback">Yo!</div>
+					</div>
+					<div class="form-group mb-4">
+						<label for="tb_password">Password</label>
+						<input type="password" id="tb_password" class="form-control form-control-lg" placeholder="Password" required>
+						<div id="tb_password_error" class="invalid-feedback">Yo!</div>
+					</div>
+					<div class="form-group mb-4 text-center">
+						<input type="submit" id="btn_login" class="btn" value="Login" id="btn_submit" />
+					</div>
+				</form>
+			</div>
+
+		</section>
+		<footer>
+		</footer>
+
+	</body>
+
+</html>

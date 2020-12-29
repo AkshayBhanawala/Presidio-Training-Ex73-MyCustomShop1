@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="/Exercise_73/_CSS/libraries/bootstrap.css">
+		<link rel="stylesheet" href="/Exercise_73/_CSS/myStyle.css">
+		<link id="css_themeLight" rel="stylesheet" href="/Exercise_73/_CSS/themeLight.css">
+		<link id="css_themeDark" rel="stylesheet" href="/Exercise_73/_CSS/themeDark.css">
+
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/FileSaver.js"></script>
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/xlsx.min.js"></script>
+		<script type="module" src="/Exercise_73/_JS/general.js"></script>
+		<script type="module" src="/Exercise_73/_JS/clerk-additem.js"></script>
+
+		<title>MCS - Manager Reports</title>
+	</head>
+
+	<body class="hide">
+
+		<header>
+			<h1><a href="/Exercise_73/users/manager/">My Custom Shop</a></h1>
+		</header>
+		<section class="user">
+			<div><label id="lbl_username">Loading...</label></div>
+			<div><button class="btn btn-danger" id="btn_logout">Logout</button></div>
+		</section>
+
+		<section class="menu">
+			<a href="/Exercise_73/users/clerk">Home</a>
+			<a href="/Exercise_73/users/clerk/additem.htm">Add Item</a>
+		</section>
+
+		<section class="contentWrapper container">
+			<hr />
+			<h3>Add Item</h3>
+			<hr />
+			<form id="AddItemForm" novalidate class="needs-validation" method="post">
+				<div class="form-group">
+					<label for="tb_itemDesc">Item Description</label>
+					<input type="text" id="tb_itemDesc" class="form-control form-control-lg" placeholder="Item Description" required>
+					<div id="tb_itemDesc_error" class="invalid-feedback">Yo!</div>
+				</div>
+				<div class="form-group">
+					<label for="tb_unit">Unit</label>
+					<input type="text" id="tb_unit" class="form-control form-control-lg" placeholder="Unit" required>
+					<div id="tb_unit_error" class="invalid-feedback">Yo!</div>
+				</div>
+				<div class="form-group">
+					<label for="tb_price">Price</label>
+					<input type="number" id="tb_price" class="form-control form-control-lg" placeholder="Price" min="1" value="1" required>
+					<div id="tb_price_error" class="invalid-feedback">Yo!</div>
+				</div>
+				<div class="form-group">
+					<label for="file_image">Image</label>
+					<div class="form-group input-group file">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Upload</span>
+						</div>
+						<div class="custom-file">
+							<input id="file_image" type="file" class="custom-file-input" accept="image/png,image/jpeg,image/svg+xml">
+							<label id="label_file" for="file_image" class="custom-file-label"></label>
+						</div>
+					</div>
+					<label for="file_image" class="imagePreview">
+						<img id="img_imagePreview" src="/Exercise_73/_Images/NoImage.svg" />
+					</label>
+				</div>
+				<div class="form-group mb-4 text-center">
+					<input type="reset" id="btn_reset" class="btn" value="Reset" />
+					<input type="submit" id="btn_additem" class="btn btn-primary" value="Add Item" />
+				</div>
+			</form>
+		</section>
+		<footer>
+		</footer>
+
+	</body>
+
+</html>

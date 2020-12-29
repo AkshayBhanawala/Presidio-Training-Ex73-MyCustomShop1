@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="/Exercise_73/_CSS/libraries/bootstrap.css">
+		<link rel="stylesheet" href="/Exercise_73/_CSS/myStyle.css">
+		<link id="css_themeLight" rel="stylesheet" href="/Exercise_73/_CSS/themeLight.css">
+		<link id="css_themeDark" rel="stylesheet" href="/Exercise_73/_CSS/themeDark.css">
+
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/FileSaver.js"></script>
+		<script type="text/javascript" src="/Exercise_73/_JS/libraries/xlsx.min.js"></script>
+		<script type="module" src="/Exercise_73/_JS/general.js"></script>
+		<script type="module" src="/Exercise_73/_JS/manager-reports.js"></script>
+
+		<title>MCS - Manager Reports</title>
+	</head>
+
+	<body class="hide">
+
+		<header>
+			<h1><a href="/Exercise_73/users/manager/">My Custom Shop</a></h1>
+		</header>
+		<section class="user">
+			<div><label id="lbl_username">Loading...</label></div>
+			<div><button class="btn btn-danger" id="btn_logout">Logout</button></div>
+		</section>
+
+		<section class="menu">
+			<a href="/Exercise_73/users/manager">Home</a>
+			<a href="/Exercise_73/users/manager/reports.htm">Reports</a>
+		</section>
+
+		<section class="contentWrapper container">
+			<hr />
+			<h3>Available Reports</h3>
+			<hr />
+			<div class="reportList">
+
+				<div class="card reportItem">
+					<div class="card-body">
+						<div><span>All Invoices</span></div>
+					</div>
+					<div class="card-footer">
+						<button id="btn_AllInvoices" type="button" class="btn btn-primary">Gel Excel</button>
+					</div>
+				</div>
+
+				<div class="card reportItem">
+					<div class="card-body">
+						<div><span>Invoices By Day</span></div>
+						<div class="inputs">
+							<form id="form_DayInvoices" novalidate class="needs-validation" >
+								<div class="form-group">
+									<input type="date" id="tb_DayInvoices_Date" class="form-control form-control" placeholder="Date" required />
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="card-footer">
+						<button id="btn_DayInvoices" type="button" class="btn btn-primary">Gel Excel</button>
+					</div>
+				</div>
+
+				<div class="card reportItem">
+					<div class="card-body">
+						<div><span>Invoices Date Range</span></div>
+						<form id="form_DateRangeInvoices" novalidate class="needs-validation">
+							<div class="form-group inputs">
+								<div><span class="text-muted">From: </span><input type="date" id="tb_DateRangeInvoices_FromDate" class="form-control form-control" placeholder="Date" required></div>
+								<div><span class="text-muted">To: </span><input type="date" id="tb_DateRangeInvoices_ToDate" class="form-control form-control" placeholder="Date" required></div>
+							</div>
+						</form>
+					</div>
+					<div class="card-footer">
+						<button id="btn_DateRangeInvoices" type="button" class="btn btn-primary">Gel Excel</button>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<footer>
+		</footer>
+
+	</body>
+
+</html>
